@@ -24,6 +24,7 @@ p = zeros(size(X, 1), 1);
 X = [ones(m, 1) X];
 hidden1 = sigmoid(X * Theta1');
 out = sigmoid([ones(m, 1) hidden1] * Theta2');
+[value, p] = max(out, [], 2);
 
 
 
